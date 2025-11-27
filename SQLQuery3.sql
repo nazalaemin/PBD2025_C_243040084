@@ -1,5 +1,6 @@
---1.Tampilkan ProductID dan total uang yang didapat (LineTotal) dari produk
-tersebut.
+USE RetailStoreDB;
+
+--1.Tampilkan ProductID dan total uang yang didapat (LineTotal) dari produk tersebut.
 
 SELECT ProductID, LineTotal
 FROM Sales.SalesOrderDetail;
@@ -18,8 +19,7 @@ SELECT ProductID, COUNT(*) AS JumlahProduct
 FROM Sales.SalesOrderDetail
 GROUP BY ProductID;
 
---4. Filter agar hanya menampilkan produk yang total uangnya (SUM(LineTotal))
-di atas $50,000.
+--4. Filter agar hanya menampilkan produk yang total uangnya (SUM(LineTotal)) di atas $50,000.
 
 SELECT ProductID, SUM(LineTotal) AS TotalQty
 FROM Sales.SalesOrderDetail
